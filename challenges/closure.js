@@ -22,15 +22,14 @@
 // /* Task 2: Counter */
 
 // /* Create a function called `summation` that accepts a parameter and uses a counter to return the summation of that number. For example, `summation(4)` should return 10 because 1+2+3+4 is 10. */
-// function summation(item){
-//   const counter = () =>{
-//     let count = 0;
-//     return function () {
-//       count++;
-//       return count
-//     }
-//   }
-// }
+function summation(item){
+  // populate an epmty array from 1 to item
+  // use the .reduce method to reduce that populated array
+  let newArr = [];
+  for(let i = 1; i <= item; i++){
+      newArr.push(i)
+  }
+  return newArr.reduce((accumulator, value) => accumulator + value)
+}
 
-// const summation = counter();
-// console.log(summation(4))
+console.log('count -->', summation(4))
